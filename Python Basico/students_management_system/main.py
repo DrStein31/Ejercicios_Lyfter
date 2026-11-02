@@ -1,4 +1,5 @@
 from menu import get_menu_option
+from actions import register_student
 
 
 students = []
@@ -7,5 +8,11 @@ students = []
 if __name__ == "__main__":
     while True:
         option = get_menu_option()
-        if option == 0:
-            break
+        match option:
+            case 0:
+                print("Thank you, see you later!")
+                break
+            case 1:
+                register_student(students)
+            case _:
+                print("This option is not implemented yet.")
